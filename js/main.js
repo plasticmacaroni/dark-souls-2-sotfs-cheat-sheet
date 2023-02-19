@@ -114,17 +114,17 @@
             //_gaq.push(['_trackEvent', 'Profile', 'Delete']);
         });
 
+        $("#toggleHideNonAchivements").change(function() {
+            var hidden = !$(this).is(':checked');
+            $('body').toggleClass('hide_non_achievement_related', !hidden);
+        });
+
         $("#toggleHideCompleted").change(function() {
             var hidden = !$(this).is(':checked');
-
-            
-
             $('body').toggleClass('hide_completed', !hidden);
         });
 
         $('#toggleCollapseAll').change(function () {
-
-            
             if ($(this).data("lastState") === null || $(this).data("lastState") === 0) {
 
                     // close all
@@ -134,10 +134,7 @@
                     $(this).data("lastState",1);
 
                 }
-                
             else {
-                
-
                 // initial state...
                 // override accordion behavior and open all
                 $('.panel-collapse.in').removeData('bs.collapse.in')
@@ -183,29 +180,31 @@
     }
 
     function calculateTotals() {
-        $('[id$="_overall_total"]').each(function(index) {
+        //For both "Playthrough" and "Checklist" totals
+        $('[id$="_overall_total"]').each(function(index, element1) {
             var type = this.id.match(/(.*)_overall_total/)[1];
             var overallCount = 0, overallChecked = 0;
-            $('[id^="' + type + '_totals_"]').each(function(index) {
-                var regex = new RegExp(type + '_totals_(.*)');
+            //For type=playthrough and type=checklist and type=nav
+            $('[id^="' + type + '_totals_"]').each(function(index, element2) {
+                var totalNumber = new RegExp(type + '_totals_(.*)');
                 var regexFilter = new RegExp('^playthrough_(.*)');
-                var i = parseInt(this.id.match(regex)[1]);
+                var i = parseInt(this.id.match(totalNumber)[1]);
                 var count = 0, checked = 0;
-                for (var j = 1; ; j++) {
-                    var checkbox = $('#' + type + '_' + i + '_' + j);
-                    if (checkbox.length == 0) {
-                        break;
-                    }
-                    if(checkbox.is(':hidden') && checkbox.prop('id').match(regexFilter) && canFilter(checkbox.closest('li'))) {
-                        continue;
+
+                //get top level section of each total header/label, and find the sibling section that has the 'li' elements
+                $(element2).parent().next().find('> li').each(function(index, checkbox) {
+                    checkbox = $(checkbox);
+                    console.log(checkbox.is(':hidden'), checkbox.prop('id').match(regexFilter), checkbox.find('input').prop('checked'));
+                    if(checkbox.find('input').is(':hidden') && checkbox.find('input').prop('id').match(regexFilter) && canFilter(checkbox.find('input').closest('li'))) {                        //this continues in a jQuery each() loop
+                        return true; 
                     }
                     count++;
                     overallCount++;
-                    if (checkbox.prop('checked')) {
+                    if (checkbox.find('input').prop('checked')) {
                         checked++;
                         overallChecked++;
                     }
-                }
+                });
                 if (checked === count) {
                     this.innerHTML = $('#' + type + '_nav_totals_' + i)[0].innerHTML = 'DONE';
                     $(this).removeClass('in_progress').addClass('done');
@@ -216,6 +215,7 @@
                     $($('#' + type + '_nav_totals_' + i)[0]).removeClass('done').addClass('in_progress');
                 }
             });
+            //Write "DONE" on any tiles where everything's done. This replaces X/X.
             if (overallChecked === overallCount) {
                 this.innerHTML = 'DONE';
                 $(this).removeClass('in_progress').addClass('done');

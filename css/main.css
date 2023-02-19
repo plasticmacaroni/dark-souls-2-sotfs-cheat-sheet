@@ -176,6 +176,10 @@ body.hide_completed .completed {
   display: none !important;
 }
 
+body.hide_non_achievement_related .tab-content ul.panel-collapse:not(.table_of_contents, .nav) li:not(.achievement-related) {
+  display: none !important;
+}
+
 /*body.collapse_all .btn-collapse {
   display: none !important;
 }*/
