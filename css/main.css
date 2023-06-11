@@ -122,7 +122,7 @@ h3 {
   display: none;
 }
 
-.achievement-related .checkbox * {
+.achievement-related .checkbox span {
   -webkit-text-stroke: 0.6pt #c60;
   color: white;
   /* text-decoration: underline #c60; */
@@ -133,6 +133,11 @@ h3 {
 .achievement-related .checkbox a {
   -webkit-text-stroke-width: 0pt;
   color: #337ab7;
+  text-decoration: none;
+}
+.achievement-related li:not(.achievement-related) span {
+  -webkit-text-stroke-width: 0pt;
+  color: rgb(207, 207, 207);
   text-decoration: none;
 }
 
