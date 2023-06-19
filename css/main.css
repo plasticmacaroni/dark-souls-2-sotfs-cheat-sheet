@@ -238,6 +238,10 @@ body.hide_completed .completed {
   display: none !important;
 }
 
+.hide_filtered {
+  display: none !important;
+}
+
 body.hide_non_achievement_related
   .tab-content
   ul.panel-collapse:not(.table_of_contents, .nav)
@@ -277,6 +281,20 @@ input[type="checkbox"] ~ * > .glyphicon-chevron-up,
 input[type="checkbox"]:checked ~ .glyphicon-chevron-down,
 input[type="checkbox"]:checked ~ * > .glyphicon-chevron-down {
   display: inline-block;
+}
+
+.bi {
+  margin-left: -24px;
+  margin-right: 12px;
+  height: 80%;
+}
+
+label.completed .bi {
+  visibility: hidden;
+}
+
+label input {
+  visibility: hidden;
 }
 
 /*

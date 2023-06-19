@@ -114,15 +114,31 @@
             //_gaq.push(['_trackEvent', 'Profile', 'Delete']);
         });
 
-        $("#toggleHideNonAchivements").change(function() {
+        $("#toggleHideNonAchievements").change(function() {
             var hidden = !$(this).is(':checked');
             $('body').toggleClass('hide_non_achievement_related', !hidden);
         });
-
         $("#toggleHideCompleted").change(function() {
             var hidden = !$(this).is(':checked');
             $('body').toggleClass('hide_completed', !hidden);
         });
+        $("#toggleHideJournal").change(function() {
+            var hidden = !$(this).is(':checked');
+            $('body i.bi-journal-check').parents("label").toggleClass('hide_filtered', !hidden);
+        });
+        $("#toggleHideItems").change(function() {
+            var hidden = !$(this).is(':checked');
+            $('body i.bi-gem').parents("label").toggleClass('hide_filtered', !hidden);
+        });
+        $("#toggleHideRouting").change(function() {
+            var hidden = !$(this).is(':checked');
+            $('body i.bi-map').parents("label").toggleClass('hide_filtered', !hidden);
+        });
+        $("#toggleHideSin").change(function() {
+            var hidden = !$(this).is(':checked');
+            $('body i.bi-heartbreak').parents("label").toggleClass('hide_filtered', !hidden);
+        });
+
 
         $('#toggleCollapseAll').change(function () {
             if ($(this).data("lastState") === null || $(this).data("lastState") === 0) {
@@ -194,7 +210,7 @@
                 //get top level section of each total header/label, and find the sibling section that has the 'li' elements
                 $(element2).parent().next().find('> li').each(function(index, checkbox) {
                     checkbox = $(checkbox);
-                    console.log(checkbox.is(':hidden'), checkbox.prop('id').match(regexFilter), checkbox.find('input').prop('checked'));
+                    // console.log(checkbox.is(':hidden'), checkbox.prop('id').match(regexFilter), checkbox.find('input').prop('checked'));
                     if(checkbox.find('input').is(':hidden') && checkbox.find('input').prop('id').match(regexFilter) && canFilter(checkbox.find('input').closest('li'))) {                        //this continues in a jQuery each() loop
                         return true; 
                     }
