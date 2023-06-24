@@ -89,19 +89,46 @@ h3 {
   overflow: hidden;
 }
 
-.btn.fadingbutton {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-bottom: 0;
-  position: fixed;
-  display: none;
+.navbar {
+  background-color: rgba(235, 235, 235, 0.4) !important;
+  border-color: #121212;
+}
+
+.navbar .input-append {
+  color: black;
+}
+
+.navbar a {
+  color: white !important;
+}
+
+nav .active a {
+  background-color: #CC6600 !important;
+}
+
+.btn-group-flex {
   z-index: 1;
+  width: 100%;
+  position: fixed;
   bottom: 0;
-  /* The "Paper" bootstrap theme modifies the transition properties;
-  reset them to the default value to prevent ruining the fadeIn() */
-  -webkit-transition: all 0s ease 0s;
-  -o-transition: all 0s ease 0s;
-  transition: all 0s ease 0s;
+  left: 0;
+  text-decoration: none;
+  color: rgb(20, 19, 19);
+  background-color: rgba(235, 235, 235, 0.4);
+  font-size: 12px;
+  padding: 0;
+  display: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.btn-group-flex .btn {
+  border-top-left-radius: 0;
+  border-left: 0;
+  /* left: 0; */
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .fadingbutton.back-to-top {
@@ -112,7 +139,7 @@ h3 {
 
 .back-to-top {
   position: fixed;
-  bottom: 2em;
+  bottom: 3em;
   right: 0px;
   text-decoration: none;
   color: #000000;
@@ -149,19 +176,7 @@ h3 {
   background-color: rgba(135, 135, 135, 0.5);
 }
 
-.fadingbutton.togglehide {
-  border-top-left-radius: 0;
-  border-left: 0;
-  left: 0;
-}
-
-.fadingbutton.togglehide.achievementhide {
-  border-top-left-radius: 0;
-  border-left: 0;
-  left: 42%;
-}
-
-.togglehide {
+/* .togglehide {
   position: fixed;
   bottom: 2em;
   text-decoration: none;
@@ -170,7 +185,7 @@ h3 {
   font-size: 12px;
   padding: 1em;
   display: none;
-}
+} */
 
 .togglehide:hover {
   background-color: rgba(135, 135, 135, 0.5);
@@ -249,10 +264,6 @@ body.hide_non_achievement_related
   display: none !important;
 }
 
-/*body.collapse_all .btn-collapse {
-  display: none !important;
-}*/
-
 input[type="checkbox"]:checked + .item_content {
   text-decoration: line-through;
 }
@@ -296,21 +307,3 @@ label.completed .bi {
 label input {
   visibility: hidden;
 }
-
-/*
-input[type="checkbox"] ~ .glyphicon-eye-close { display:none; }
-
-input[type="checkbox"]:checked ~ .glyphicon-eye-close { display: inline-block; }
-
-input[type="checkbox"] ~ .glyphicon-eye-open { display: inline-block; }
-
-input[type="checkbox"]:checked ~ .glyphicon-eye-open { display: none; }
-
-input[type="checkbox"] ~ .glyphicon-chevron-down { display:none; }
-
-input[type="checkbox"]:checked ~ .glyphicon-chevron-down { display: inline-block; }
-
-input[type="checkbox"] ~ .glyphicon-chevron-up { display: inline-block; }
-
-input[type="checkbox"]:checked ~ .glyphicon-chevron-up { display: none; }
-*/

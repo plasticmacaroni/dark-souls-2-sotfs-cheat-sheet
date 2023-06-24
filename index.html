@@ -22,7 +22,7 @@
     </script>
     <script src="js/main.js"></script>
 </head>
-<body>
+<body data-bs-theme="dark">
     <nav class="navbar navbar-default">
         <div class="container">
                 
@@ -66,83 +66,84 @@
         <div class="tab-content">
 
             <div class="btn-group" role="group">
-		        <div class="btn-group" role="group" data-toggle="buttons">
-		          <label class="btn btn-default">
+		        <div class="btn-group btn-group-flex" role="group" data-toggle="buttons">
+		          <label class="btn btn-secondary">
                     <input type="checkbox" id="toggleHideCompleted">
                     <span class="glyphicon glyphicon-eye-close"></span>
                     <span class="glyphicon glyphicon-eye-open"></span>
                     Hide Completed
-                    <a class="btn btn-default btn-sm fadingbutton togglehide" onclick="$('#toggleHideCompleted').click();">
+                    <!-- <a class="btn btn-secondary btn-sm fadingbutton togglehide" onclick="$('#toggleHideCompleted').click();">
                         <span class="glyphicon glyphicon-eye-close"></span>
                         <span class="glyphicon glyphicon-eye-open"></span>
                         Hide Completed
-                    </a>
+                    </a> -->
                 </label>
-                <label class="btn btn-default">
+                <label class="btn btn-secondary">
                     <input type="checkbox" id="toggleHideNonAchievements">
                     <span class="glyphicon glyphicon-eye-close"></span>
                     <span class="glyphicon glyphicon-eye-open"></span>
                     Hide Non-Achievement Tasks
-                    <a class="btn btn-default btn-sm fadingbutton togglehide achievementhide" onclick="$('#toggleHideNonAchievements').click();">
+                    <!-- <a class="btn btn-secondary btn-sm fadingbutton togglehide achievementhide" onclick="$('#toggleHideNonAchievements').click();">
                         <span class="glyphicon glyphicon-eye-close"></span>
                         <span class="glyphicon glyphicon-eye-open"></span>
                         Hide Non-Achievement Tasks
-                    </a>
+                    </a> -->
                 </label>
-                <label class="btn btn-default">
+                <label class="btn btn-secondary">
                     <input type="checkbox" id="toggleHideJournal">
                     <span class="glyphicon glyphicon-eye-close"></span>
                     <span class="glyphicon glyphicon-eye-open"></span>
                     Hide Non-Essential Tasks
-                    <a class="btn btn-default btn-sm fadingbutton togglehide" onclick="$('#toggleHideJournal').click();">
+                    <!-- <a class="btn btn-secondary btn-sm fadingbutton togglehide" onclick="$('#toggleHideJournal').click();">
                         <span class="glyphicon glyphicon-eye-close"></span>
                         <span class="glyphicon glyphicon-eye-open"></span>
                         Hide Non-Essential Checklist and Information Tasks
-                    </a>
+                    </a> -->
                 </label>
-                <label class="btn btn-default">
+                <label class="btn btn-secondary">
                     <input type="checkbox" id="toggleHideItems">
                     <span class="glyphicon glyphicon-eye-close"></span>
                     <span class="glyphicon glyphicon-eye-open"></span>
                     Hide Non-Essential Items
-                    <a class="btn btn-default btn-sm fadingbutton togglehide" onclick="$('#toggleHideItems').click();">
+                    <!-- <a class="btn btn-secondary btn-sm fadingbutton togglehide" onclick="$('#toggleHideItems').click();">
                         <span class="glyphicon glyphicon-eye-close"></span>
                         <span class="glyphicon glyphicon-eye-open"></span>
                         Hide Item Tasks
-                    </a>
+                    </a> -->
                 </label>
-                <label class="btn btn-default">
+                <label class="btn btn-secondary">
                     <input type="checkbox" id="toggleHideRouting">
                     <span class="glyphicon glyphicon-eye-close"></span>
                     <span class="glyphicon glyphicon-eye-open"></span>
                     Hide Route Information
-                    <a class="btn btn-default btn-sm fadingbutton togglehide" onclick="$('#toggleHideRouting').click();">
+                    <!-- <a class="btn btn-secondary btn-sm fadingbutton togglehide" onclick="$('#toggleHideRouting').click();">
                         <span class="glyphicon glyphicon-eye-close"></span>
                         <span class="glyphicon glyphicon-eye-open"></span>
                         Hide Route Tasks
-                    </a>
+                    </a> -->
                 </label>
-                <label class="btn btn-default">
+                <label class="btn btn-secondary">
                     <input type="checkbox" id="toggleHideSin">
                     <span class="glyphicon glyphicon-eye-close"></span>
                     <span class="glyphicon glyphicon-eye-open"></span>
                     Hide NPC Kills and Quest Breaks
-                    <a class="btn btn-default btn-sm fadingbutton togglehide" onclick="$('#toggleHideSin').click();">
+                    <!-- <a class="btn btn-secondary btn-sm fadingbutton togglehide" onclick="$('#toggleHideSin').click();">
                         <span class="glyphicon glyphicon-eye-close"></span>
                         <span class="glyphicon glyphicon-eye-open"></span>
                         Hide NPC Kills and Quest Breaks
-                    </a>
+                    </a> -->
                 </label>
 		        </div>
-                <div class="btn-group" role="group" data-toggle="buttons">
-		          <label class="btn btn-default">
-		            <input type="checkbox" id="toggleCollapseAll">
-                    <span class="glyphicon glyphicon-chevron-up"></span>
-                    <span class="glyphicon glyphicon-chevron-down"></span>
-                    Collapse All
-		          </label>
-		        </div>
+
 	        </div>
+            <div class="btn-group" role="group" data-toggle="buttons">
+                <label class="btn btn-secondary">
+                  <input type="checkbox" id="toggleCollapseAll">
+                  <span class="glyphicon glyphicon-chevron-up"></span>
+                  <span class="glyphicon glyphicon-chevron-down"></span>
+                  Collapse All
+                </label>
+              </div>
         	
             <div class="tab-pane active" id="tabPlaythrough">
 
@@ -1219,7 +1220,7 @@
                     <li data-id="playthrough_21d58844-5de0-4cfd-aa10-483f5a02b067"><i class="bi bi-journal-check"> </i>Return to <a href="http://darksouls2.wikidot.com/majula">Majula</a>, level up, upgrade your weapons and armor, and buy any consumables you want</li>
                     <li data-id="playthrough_ba7c5815-2e57-4b20-8898-0d03567d35e8"><i class="bi bi-journal-check"> </i>If you haven't already, buy the 12,000 ladder from <a href="http://darksouls2.wikidot.com/laddersmith-gilligan">Laddersmith Gilligan</a>, talk to him to get the <a href="http://darksouls2.wikidot.com/melu-scimitar">Melu Scimitar</a> and slide down the ladder</li>
                     <li data-id="playthrough_dd55a7b0-0288-41ea-9571-c5a61bdc8e69" class="achievement-related"><i class="bi bi-trophy-fill"> </i>Go up the other ladder, open the door and get the <a href="http://darksouls2.wikidot.com/dragon-talon">Dragon's Talon</a>, <a href="http://darksouls2.wikidot.com/soul-vortex">Soul Vortex</a> Sorcery, <a href="http://darksouls2.wikidot.com/witchtree-branch">Witchtree Branch</a>, <a href="http://darksouls2.wikidot.com/witchtree-bellvine">Witchtree Bellvine</a> and <a href="http://darksouls2.wikidot.com/great-lightning-spear">Great Lightning Spear</a> Miracle</li>
-                    <li data-id="playthrough_130c9bf4-2855-4bb9-af76-654b400a87f3">Now's a great time to get <a href="http://darksouls2.wikidot.com/havel-s-set">Havel's Set</a> and <a href="http://darksouls2.wikidot.com/havel-s-greatshield">Havel's Greatshield</a> as described earlier in <a href="#The_Gutter">The Gutter</a> section (from the<a href="http://darksouls2.wikidot.com/the-gutter">The Gutter / Upper Gutter</a> bonfire), and return to the bonfire</li>
+                    <li data-id="playthrough_130c9bf4-2855-4bb9-af76-654b400a87f3"><i class="bi bi-journal-check"> </i>Now's a great time to get <a href="http://darksouls2.wikidot.com/havel-s-set">Havel's Set</a> and <a href="http://darksouls2.wikidot.com/havel-s-greatshield">Havel's Greatshield</a> as described earlier in <a href="#The_Gutter">The Gutter</a> section (from the<a href="http://darksouls2.wikidot.com/the-gutter">The Gutter / Upper Gutter</a> bonfire), and return to the bonfire</li>
                 </ul>
                 
                 <h3 id="Iron_Keep"><a href="#Iron_Keep_col" data-toggle="collapse" data-parent="#tabPlaythrough" class="btn btn-primary btn-collapse btn-sm"></a><a href="http://darksouls2.wikidot.com/iron-keep">Iron Keep</a> / <a href="http://darksouls2.wikidot.com/belfry-sol">Belfry Sol</a> <span id="playthrough_totals_13"></span></h3>
@@ -1227,7 +1228,7 @@
                     <li data-id="playthrough_f330121b-0445-4857-825c-fdbed0285573"><i class="bi bi-map"> </i>Travel to the <a href="http://darksouls2.wikidot.com/iron-keep">Iron Keep / Threshold Bridge</a> bonfire</li>
                     <li data-id="playthrough_7915bfc6-56fa-44e0-8d6f-911ce222417e"><i class="bi bi-gem"> </i>If you have enough fire defense and/or healing you can run under the steps to get the <a href="http://darksouls2.wikidot.com/human-effigy">Human Effigy</a></li>
                     <li data-id="playthrough_cc7f2110-c49c-43cb-be3f-c24ef2d60bcd"><i class="bi bi-gem"> </i>Also, you can get a <a href="http://darksouls2.wikidot.com/bonfire-ascetic">Bonfire Ascetic</a> from jumping off the bridge and crossing the platforms</li>
-                    <li data-id="playthrough_095cbd71-c23c-45f3-8168-76c4941e3761"><i class="bi bi-journal-check"> </i>Go across the bridge and open the door, you will get invaded by several npc phantoms</li>
+                    <li data-id="playthrough_095cbd71-c23c-45f3-8168-76c4941e3761"><i class="bi bi-map"> </i>Go across the bridge and open the door, you will get invaded by several npc phantoms</li>
                         <ul>
                             <li data-id="playthrough_29df4ba1-51fa-4a37-8d63-bb1d713838ed"><i class="bi bi-journal-check"> </i>The first time through, you will be invaded by <a href="http://darksouls2.wikidot.com/fencer-sharron">Fencer Sharron</a> just before the building</li>
                             <li data-id="playthrough_c9985d03-7381-4a0e-b251-2d7860cb3901"><i class="bi bi-journal-check"> </i>The second time you pass through here, you will be invaded again, this time by <a href="http://darksouls2.wikidot.com/armorer-dennis"> Armorer Dennis</a></li>
@@ -3127,7 +3128,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <a href="#" id="profileModalClose" class="btn btn-default" data-dismiss="modal">Close</a>
+                    <a href="#" id="profileModalClose" class="btn btn-secondary" data-dismiss="modal">Close</a>
                     <a href="#" id="profileModalAdd" class="btn btn-primary" data-dismiss="modal">Add</a>
                     <a href="#" id="profileModalUpdate" class="btn btn-primary">Update</a>
                     <a href="#" id="profileModalDelete" class="btn btn-danger">Delete</a>
@@ -3136,7 +3137,7 @@
         </div>
     </div>
 
-    <a class="btn btn-default btn-sm fadingbutton back-to-top">Back to Top&thinsp;<span class="glyphicon glyphicon-arrow-up"></span></a>
+    <a class="btn btn-secondary btn-sm fadingbutton back-to-top">Back to Top&thinsp;<span class="glyphicon glyphicon-arrow-up"></span></a>
 
 </body>
 </html>
