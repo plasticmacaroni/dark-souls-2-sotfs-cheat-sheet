@@ -164,7 +164,7 @@
         });
         $("#toggleHideRouting").change(function() {
             var hidden = !$(this).is(':checked');
-            $('body i.bi-map').parents("label").toggleClass('hide_filtered', !hidden);
+            $('body i.bi-map-fill').parents("label").toggleClass('hide_filtered', !hidden);
             $('[data-item-toggle]').change(function() {
                 var type = $(this).data('item-toggle');
                 var to_hide = $(this).is(':checked');
